@@ -1,1 +1,1 @@
-"# dsa-lab" 
+I am not understanding anything i feel like ugh. idk. ig i have been paying way too much attention to ml now, but i have to do so many things like ntcc, nptel, ml, make personal projects, aws sbcl, sih also and now dsa how do i balance all of this while with my class until 4:30 pm i reach home around 6 and just aa idk..i want to sleep for 7 hours at least i cant this is so hectic.
