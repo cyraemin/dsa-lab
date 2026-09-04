@@ -1,16 +1,19 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
+#include <stdlib.h>
 
 struct Node
 {
     int data;
-    Node *next;
+    struct Node *next;
 };
 
-Node *start = NULL;
+struct Node *start = NULL;
+
 void insert(int value)
 {
-    Node *newNode = new Node;
+    struct Node *newNode, *temp;
+
+    newNode = (struct Node *)malloc(sizeof(struct Node));
     newNode->data = value;
     newNode->next = NULL;
 
@@ -20,7 +23,7 @@ void insert(int value)
     }
     else
     {
-        Node *temp = start;
+        temp = start;
 
         while (temp->next != NULL)
         {
@@ -33,22 +36,23 @@ void insert(int value)
 
 void display()
 {
-    Node *temp = start;
+    struct Node *temp = start;
 
     while (temp != NULL)
     {
-        cout << temp->data << " -> ";
+        printf("%d -> ", temp->data);
         temp = temp->next;
     }
 
-    cout << "NULL" << endl;
+    printf("NULL\n");
 }
 
 void reverse()
 {
-    Node *prev = NULL;
-    Node *curr = start;
-    Node *next = NULL;
+    struct Node *prev, *curr, *next;
+
+    prev = NULL;
+    curr = start;
 
     while (curr != NULL)
     {
@@ -67,12 +71,13 @@ int main()
     insert(20);
     insert(30);
     insert(40);
-    cout << "Original Linked List: ";
+
+    printf("Original Linked List: ");
     display();
 
     reverse();
 
-    cout << "Reversed Linked List: ";
+    printf("Reversed Linked List: ");
     display();
 
     return 0;
